@@ -1,2 +1,1 @@
-# desktop-dotfiles-old
-Old dotfiles for my desktop that I am no longer using.
+Each folder is an old Arch Linux rice I used to use on my desktop computer with its own README.md that should be followed.
