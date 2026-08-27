@@ -1,0 +1,13 @@
+{
+    "background"     : "bg0",
+    "text"           : "fg2",
+    "prompt"         : "dark_green",
+    "placeholder"    : "bg5",
+    "input"          : "bright_green",
+    "match"          : "bright_purple",
+    "selection"      : "dark_cyan",
+    "selection-text" : "fg0",
+    "selection-match": "bright_purple",
+    "counter"        : "fg2",
+    "border"         : "fg5"
+}

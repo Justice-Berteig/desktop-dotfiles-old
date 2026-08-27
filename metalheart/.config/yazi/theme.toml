@@ -1,0 +1,70 @@
+[mgr]
+cwd = { fg="green" }
+find_keyword = {
+    fg="lightmagenta",
+    bold=true,
+    italic=true,
+    underline=true
+}
+
+[indicator]
+parent = { bg="green" }
+current = { bg="green", bold=true }
+preview = { bg="green" }
+padding = { open="█", close="█" }
+
+[mode]
+normal_main = { fg="white", bg="green" }
+normal_alt = { fg="black", bg="gray" }
+select_main = { fg="white", bg="cyan" }
+select_alt = { fg="black", bg="gray" }
+unset_main = { fg="white", bg="blue" }
+unset_alt = { fg="black", bg="gray" }
+
+[status]
+overall = { fg="white", bg="darkgray" }
+sep_left = { open="█", close="█" }
+sep_right = { open="█", close="█" }
+perm_type = { fg="white" }
+perm_read = { fg="blue" }
+perm_write = { fg="green" }
+perm_exec = { fg="red" }
+perm_sep = { fg="gray" }
+
+[pick]
+border = { fg="brightyellow" }
+
+[input]
+border = { fg="brightyellow" }
+
+[tasks]
+border = { fg="brightyellow" }
+
+[filetype]
+rules = [
+    { mime="image/*", fg="lightyellow" },
+    { mime="video/*", fg="lightred" },
+    { url="*/", fg="lightcyan" }
+]
+
+[icon]
+prepend_conds = [
+    { if="dir & hidden", text="", fg="cyan" },
+    { if="dir", text="", fg="cyan" },
+    { if="!dir & !link & exec", text="", fg="lightyellow" },
+    { if="!dir & hidden", text="", fg="grey" },
+    { if="!dir", text="", fg="grey" }
+]
+
+prepend_exts = []
+
+prepend_files = []
+
+dirs = []
+
+prepend_globs = [
+    { url="**/.bash*", text="", fg="blue" },
+    { url="**/.zsh*", text="", fg="yellow" },
+    { url="**/.zprofile*", text="", fg="yellow" },
+    { url="**/.zcompdump*", text="", fg="yellow" }
+]

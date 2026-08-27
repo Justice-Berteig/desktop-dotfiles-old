@@ -1,0 +1,27 @@
+return {
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
+  opts = {
+    indent = { enable = true },
+    highlight = { enable = true },
+    folds = { enable = true },
+    ensure_installed = {
+      "bash",
+      "c",
+      "cmake",
+      "cpp",
+      "go",
+      "html",
+      "javascript",
+      "json",
+      "lua",
+      "markdown",
+      "python",
+      "svelte",
+      "tsx",
+      "typescript",
+      "vim",
+      "vimdoc",
+    },
+  },
+}

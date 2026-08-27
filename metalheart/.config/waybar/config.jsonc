@@ -1,0 +1,78 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34, // Waybar height (to be removed for auto height)
+  "margin-left": 8,
+  "margin-right": 8,
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "spacing": 24,
+
+  // Choose the order of the modules
+  "modules-left": [
+    "clock",
+    "disk",
+    "memory",
+    "temperature"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "network"
+  ],
+
+  // Configure left side modules
+  "clock": {
+    "format": "{:%Y%m%d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "disk": {
+    "interval": 300,
+    "format": "󰋊 {percentage_used}% "
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{icon} {temperatureC}°C",
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""]
+  },
+
+  // Configure right side modules
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": " {essid} ({signalStrength}%) ",
+    "format-ethernet": " Ethernet",
+    "format-disconnected": "⚠ Disconnected"
+  }
+}
